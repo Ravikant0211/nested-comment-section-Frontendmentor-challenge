@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200&family=Rubik:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* colors */
+
+    /* Primary */
+    --Moderate-blue: hsl(238, 40%, 52%);
+    --Soft-Red: hsl(358, 79%, 66%);
+    --Light-grayish-blue: hsl(239, 57%, 85%);
+    --Pale-red: hsl(357, 100%, 86%);
+
+    /* neutral */
+    --Dark-blue: hsl(212, 24%, 26%);
+    --Grayish-Blue: hsl(211, 10%, 45%);
+    --Light-gray: hsl(223, 19%, 93%);
+    --Very-light-gray: hsl(228, 33%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: var(--Light-gray);
+    min-height: 100vh;
+}
+.parent-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.pop-up {
+    min-width: 250px;
+    max-width: 320px;
+    min-height: 150px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    padding: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    display: none;
+}
+.pop-up h2{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.pop-up p{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: rgb(80,80,80);
+    margin-bottom: 1rem;
+}
+.pop-up .btn{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.pop-up .cancel{
+    background: rgba(60, 60, 60, 0.862);
+}
+.pop-up .cancel:hover{
+    cursor: pointer;
+    background: rgba(60, 60, 60, 0.804);
+}
+.pop-up .delete{
+    margin-left: 1rem;
+    background: hsl(358, 79%, 66%);
+}
+.pop-up .delete:hover{
+    cursor: pointer;
+    background: hsla(358, 79%, 66%, 0.926);
+}
+
+.active{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    min-width: 100vw;
+    position: absolute;
+    z-index: 15;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35));
+}
+
+.container{ 
+    padding: 2rem;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 720px;
+    }
+}

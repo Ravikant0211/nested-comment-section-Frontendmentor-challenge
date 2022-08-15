@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.comment {
+    min-height: 220px;
+    max-height: 1200px;
+    min-width: 600px;
+    margin-bottom: 15px;
+    padding: 1.5rem;
+    background: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: rgba(50, 50, 93, 0.01) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.reply::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    min-height: 100%;
+    background: hsl(222, 38%, 82%);
+    border: 1px solid hsl(222, 38%, 82%);
+    outline: none;
+}
+.reply:not(:first-child) {
+    position: relative;
+    margin-left: 8rem;
+    margin-top: 1rem;
+}
+.vote {
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background: var(--Light-gray);
+    margin-top: 2.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 6px;
+}
+.vote img {
+    width: 15px;
+    cursor: pointer;
+}
+.vote .plus {
+    margin-bottom: 15px;
+}
+.vote .minus {
+    margin-top: 15px;
+}
+.vote .score {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: hsl(238, 40%, 52%);
+}
+
+.main-content {
+    position: absolute;
+    padding: auto 1.5rem;
+    top: 10px;
+    left: 7rem;
+}
+.header {
+   display: flex;
+   justify-content: space-between;
+}
+.user_details {
+    display: flex;
+    gap: 1.5rem;
+}
+.user_details .username{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+.user_details .youIcon {
+    height: 20px;
+    padding-top: 2px;
+    padding-bottom: 22px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    color: hsl(0, 0%, 100%);
+    background: hsl(238, 40%, 52%);
+}
+.user_details .time_span{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: rgb(131, 128, 128);
+}
+.edit_section img{
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.edit_section span{
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: hsl(238, 40%, 52%);
+}
+.edit_section span:hover{
+    cursor: pointer;
+}
+.update_btn {
+    margin-top: 4px;
+    margin-left: 85%;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background: hsl(238, 40%, 52%);
+    color: hsl(0, 0%, 100%);
+    display: none;
+    text-transform: uppercase;
+}
+.update_btn:hover {
+    cursor: pointer;
+    background: hsl(212, 24%, 26%);
+}
+.main-content textarea {
+    margin-top: 1.5rem;
+    border: none;
+    outline: none;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.edit_section .delete_btn{
+    color: hsl(358, 79%, 66%);
+}
+.edit_section .edit_btn img{
+    margin-left: 25px;
+}
+.comment_text {
+    background: hsl(0, 0%, 100%);
+    margin-top: 2rem;
+    margin-right: 10px;
+    color: rgb(130, 130, 130);
+    font-size: 1.7rem;
+}

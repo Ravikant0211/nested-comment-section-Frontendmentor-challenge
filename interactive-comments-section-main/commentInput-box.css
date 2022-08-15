@@ -1,0 +1,60 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 100%;
+}
+.commentInput-container {
+    display: flex;
+    gap: 3%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.01) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.reply_to_reply::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    min-height: 100%;
+    background: hsl(222, 38%, 82%);
+    border: 1px solid hsl(222, 38%, 82%);
+    outline: none;
+}
+.reply_to_reply {
+    position: relative;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.commentInput-container textarea{
+    display: inline-block;
+    min-width: 80%;
+    padding: 7px 5px;
+    color: #333;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.commentInput-container button{
+    margin-bottom: 0;
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: hsl(238, 40%, 52%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.commentInput-container button:hover{
+    background: hsl(212, 24%, 26%);
+}
